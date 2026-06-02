@@ -1,18 +1,5 @@
 # APBD Test 2 — Cheatsheet
 
-Everything you need in one file.
-
-## Repo structure
-| Folder | What |
-|--------|------|
-| `apbd-test/` | Template — clone this, rename, fill in |
-| `ref/GroupA/` | Ready solution — Customers + concerts (POST) |
-| `ref/GroupD/` | Ready solution — Players + matches (POST) |
-| `arc/ApbdTesta/` | Ready solution — Patients + appointments (GET list + POST) |
-| `arc/ApbdTestb/` | Ready solution — Orders + products (GET single + PUT) |
-
----
-
 The exam is almost always the **same 5-table shape** —
 your job is to spot which table plays which role, then rename + fill in.
 
