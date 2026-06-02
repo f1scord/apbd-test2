@@ -18,22 +18,20 @@ public class DatabaseContext : DbContext
     {
         modelBuilder.Entity<Doctor>().HasData(new List<Doctor>
         {
-            new() { DoctorId = 1, FirstName = "Adam",  LastName = "Mazur",    Specialization = "Cardiology",   Phone = "111222333" },
-            new() { DoctorId = 2, FirstName = "Ewa",   LastName = "Kaczmarek",Specialization = "Dermatology",  Phone = "222333444" },
+            new() { DoctorId = 1, FirstName = "Adam", LastName = "Smith", Specialization = "Cardiology", Phone = "111222333" },
+            new() { DoctorId = 2, FirstName = "Eva",  LastName = "Brown", Specialization = "Dermatology", Phone = "444555666" },
         });
 
         modelBuilder.Entity<MedicalService>().HasData(new List<MedicalService>
         {
-            new() { ServiceId = 1, Name = "General Consultation", Description = "Basic medical consultation",  Price = 150, DurationMinutes = 30 },
-            new() { ServiceId = 2, Name = "Blood Test",           Description = "Complete blood count",        Price = 80,  DurationMinutes = 15 },
-            new() { ServiceId = 3, Name = "ECG",                  Description = "Electrocardiogram examination",Price = 120, DurationMinutes = 20 },
-            new() { ServiceId = 4, Name = "Skin Examination",     Description = "Dermatological skin check",   Price = 200, DurationMinutes = 40 },
+            new() { ServiceId = 1, Name = "Consultation", Description = "General consultation", Price = 100, DurationMinutes = 30 },
+            new() { ServiceId = 2, Name = "Blood Test",   Description = "Basic blood test",     Price = 50,  DurationMinutes = 15 },
         });
 
         modelBuilder.Entity<Patient>().HasData(new List<Patient>
         {
-            new() { PatientId = 1, FirstName = "Anna", LastName = "Kowalska", DateOfBirth = DateTime.Parse("1990-03-15"), Phone = "123456789" },
-            new() { PatientId = 2, FirstName = "Jan",  LastName = "Nowak",    DateOfBirth = DateTime.Parse("1985-07-22"), Phone = "234567891" },
+            new() { PatientId = 1, FirstName = "John", LastName = "Doe", DateOfBirth = DateTime.Parse("1990-01-01"), Phone = "123456789" },
+            new() { PatientId = 2, FirstName = "Jane", LastName = "Doe", DateOfBirth = DateTime.Parse("1985-06-15"), Phone = "987654321" },
         });
 
         modelBuilder.Entity<Appointment>().HasData(new List<Appointment>
@@ -45,8 +43,7 @@ public class DatabaseContext : DbContext
         modelBuilder.Entity<AppointmentService>().HasData(new List<AppointmentService>
         {
             new() { AppointmentId = 1, ServiceId = 1, Quantity = 1, PerformedAt = DateTime.Parse("2026-05-20") },
-            new() { AppointmentId = 1, ServiceId = 3, Quantity = 1, PerformedAt = DateTime.Parse("2026-05-20") },
-            new() { AppointmentId = 2, ServiceId = 4, Quantity = 1, PerformedAt = DateTime.Parse("2026-05-21") },
+            new() { AppointmentId = 2, ServiceId = 2, Quantity = 1, PerformedAt = DateTime.Parse("2026-05-21") },
         });
     }
 }
